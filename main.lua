@@ -12,5 +12,5 @@ return function(File)
 		end
 	end
 
-  return Materials
+	return Materials
 end
