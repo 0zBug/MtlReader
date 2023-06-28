@@ -4,7 +4,7 @@ return function(File)
 	
 	for _, Line in next, string.split(readfile(File), "\n") do
 		if string.sub(string.gsub(Line, "%s", ""), 1, 6) == "newmtl" then
-			Material = string.match(Line, "newmtl%s+(.+)?[^ ]")
+			Material = string.match(Line, "newmtl%s+([%a%d\_\.]+)")
 	
 			Materials[Material] = {}
 		elseif string.sub(string.gsub(Line, "%s", ""), 1, 6) == "map_Kd" then
